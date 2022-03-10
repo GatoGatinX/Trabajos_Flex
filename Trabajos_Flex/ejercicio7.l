@@ -6,9 +6,9 @@
 
 %%
 [\n\t]
-go|if|play|it|window|jump|think|learn|study|to|at|the|link {printf("palabra clave identificada\n");printf("%s",yylex());}
-[a-zA-Z]+ {printf("Otra palabra\n");printf("%s",yylex());}
-[0-9]+ {printf("numero encontrado\n");printf("%s",yylex());}
+go|if|play|it|window|jump|think|learn|study|to|at|the|link {printf("\"%s\" es",yytext);printf(" palabra clave identificada\n");}
+[a-zA-Z]+ {printf("\"%s\" es",yytext);printf(" otra palabra\n");}
+[0-9]+ {printf("\"%s\" es",yytext);printf(" numero encontrado\n");}
 %%
 
 int main(){
