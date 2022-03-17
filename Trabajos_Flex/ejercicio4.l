@@ -4,10 +4,10 @@ int min=0, may=0, num=0,gion=0;
 %}
 
 %%
-[A-Z] {printf("Mayuscula\t");may++;}
-[a-z] {printf("minuscula\t");min++;}
-[0-9] {printf("Digito\t");num++;}
-["_"] {printf("Guion bajo\t");gion++;}
+[A-Z] {printf("Mayuscula ");printf("%d\t",++may);}
+[a-z] {printf("minuscula ");printf("%d\t",++min);}
+[0-9] {printf("Digito ");printf("%d\t",++num);}
+["_"] {printf("Guion bajo ");printf("%d\t",++gion);}
 %%
 int yywrap()
 {
@@ -17,5 +17,4 @@ int yywrap()
 int main(){
  printf("Escribe una cadena de texto     ");
  yylex();
- printf("Mayuscula=%d, minuscula=%d, Digito=%d, Guion bajo=%d",may,min,num,gion);   
 }
