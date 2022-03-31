@@ -2,14 +2,12 @@
 <Declaraciones> → variable <Declaraciones>
 <Declaraciones> → constante <Declaraciones>
 <Declaraciones> → λ
-<Compuesta> → begin <ListaSentencias>
-<ListaSentencias> → <Sentencia><ListaSentencias>|λ
+<Compuesta> → begin <ListaSentencias> end
+<ListaSentencias> → <Sentencia><ListaSentencias><N>|λ
+<N> → break
 <Sentencia> → <Compuesta>
 <Sentencia> → repeat <ListaSentencias> until <Expresion>
-<Sentencia> → if <Expresion> then <Sentencia>
-<Sentencia> → break 
-<Sentencia> → if <Expresion> then <Sentencia> else <Sentencia>
-<Sentencia> → break 
-<Sentencia> → other
-<Sentencia> → end 
+<Sentencia> → if <Expresion> then <Sentencia> 
+<Sentencia> → if <Expresion> then <Sentencia> else <Sentencia> 
+<Sentencia> → other 
 <Expresion> → id|constante
