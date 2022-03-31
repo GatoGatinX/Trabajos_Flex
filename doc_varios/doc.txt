@@ -2,7 +2,7 @@
 <Declaraciones> → variable <Declaraciones>
 <Declaraciones> → constante <Declaraciones>
 <Declaraciones> → λ
-<Compuesta> → begin <ListaSentencias> end
+<Compuesta> → begin <ListaSentencias>
 <ListaSentencias> → <Sentencia><ListaSentencias>|λ
 <Sentencia> → <Compuesta>
 <Sentencia> → repeat <ListaSentencias> until <Expresion>
@@ -11,5 +11,5 @@
 <Sentencia> → if <Expresion> then <Sentencia> else <Sentencia>
 <Sentencia> → break 
 <Sentencia> → other
-<Sentencia> → break 
+<Sentencia> → end 
 <Expresion> → id|constante
